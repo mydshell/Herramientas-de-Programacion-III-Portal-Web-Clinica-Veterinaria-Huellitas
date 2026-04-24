@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulario de contacto accesible para solicitar información o agendar una cita en la Clínica Veterinaria Huellitas.">
+  <meta name="keywords" content="contacto veterinaria, agendar cita, Huellitas Carepa, formulario">
+  <meta name="author" content="Mydshell Usuga">
+  <meta property="og:title" content="Contacto | Clínica Veterinaria Huellitas">
+  <meta property="og:description" content="Solicita información o agenda una cita con Huellitas.">
+  <title>Clínica Veterinaria Huellitas | Contacto</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootswatch.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img class="brand-logo mr-2" src="img/logo-huellitas.png" alt="Logo de Clínica Veterinaria Huellitas">
+          <span>Huellitas</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Mostrar navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="instalaciones.html">Instalaciones</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+            <li class="nav-item active"><a class="nav-link" href="contacto.html" aria-current="page">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido-principal" tabindex="-1">
+    <section class="section-band">
+      <div class="container">
+        <div class="row">
+          <article class="col-lg-8">
+            <h1 class="section-title">Contacto y citas</h1>
+            <p>Completa el formulario para solicitar información, programar una consulta o recibir orientación sobre los servicios de la Clínica Veterinaria Huellitas.</p>
+          </article>
+          <aside class="col-lg-4">
+            <div class="content-aside">
+              <h2 class="h5">Canales</h2>
+              <p class="mb-1">Atención presencial en Carepa.</p>
+              <p class="mb-1">Teléfono móvil: <a href="tel:+573052432281" aria-label="Llamar al número móvil +57 305 243 2281">+57 305 243 2281</a></p>
+              <p class="mb-1">Teléfono fijo: <a href="tel:+576048236548" aria-label="Llamar al número fijo +57 604 823 6548">+57 604 823 6548</a></p>
+              <p class="mb-0">Citas por teléfono, redes sociales y formulario web.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-band section-soft">
+      <div class="container">
+        <article class="row justify-content-center">
+          <div class="col-lg-8">
+            <form id="appointmentForm" novalidate aria-describedby="formInstructions">
+              <p id="formInstructions" class="form-text text-muted">Todos los campos son obligatorios para atender tu solicitud.</p>
+              <div class="form-group">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="nombreFeedback" autocomplete="name" required aria-required="true">
+                <div id="nombreFeedback" class="invalid-feedback">Ingresa un nombre de mínimo 3 caracteres.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailFeedback" autocomplete="email" required aria-required="true">
+                <div id="emailFeedback" class="invalid-feedback">Ingresa un correo electrónico válido.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" name="telefono" aria-describedby="telefonoHelp telefonoFeedback" autocomplete="tel" inputmode="tel" placeholder="+57 305 243 2281" required aria-required="true">
+                <small id="telefonoHelp" class="form-text text-muted">Ejemplo: +57 305 243 2281.</small>
+                <div id="telefonoFeedback" class="invalid-feedback">Ingresa un número de teléfono colombiano válido.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="servicio">Servicio de interés</label>
+                <select class="form-control" id="servicio" name="servicio" aria-describedby="servicioFeedback" required aria-required="true">
+                  <option value="">Selecciona una opción</option>
+                  <option value="consulta">Consulta veterinaria general</option>
+                  <option value="vacunacion">Vacunación</option>
+                  <option value="parasitos">Control de parásitos</option>
+                  <option value="tratamiento">Tratamiento médico básico</option>
+                  <option value="nutricion">Asesoría nutricional</option>
+                </select>
+                <div id="servicioFeedback" class="invalid-feedback">Selecciona el servicio de interés.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="5" aria-describedby="mensajeFeedback" placeholder="Describe brevemente la necesidad de tu mascota." required aria-required="true"></textarea>
+                <div id="mensajeFeedback" class="invalid-feedback">El mensaje debe tener mínimo 20 caracteres.</div>
+              </div>
+
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="acepta" name="acepta" aria-describedby="aceptaFeedback" required aria-required="true">
+                <label class="form-check-label" for="acepta">Acepto ser contactado para confirmar la solicitud.</label>
+                <div id="aceptaFeedback" class="invalid-feedback">Debes aceptar el contacto para poder enviar la solicitud.</div>
+              </div>
+
+              <div id="formStatus" class="form-status" role="status" aria-live="polite" aria-atomic="true"></div>
+              <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+            </form>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container d-md-flex justify-content-between">
+      <p class="mb-2 mb-md-0">Clínica Veterinaria Huellitas - Carepa, Antioquia. Teléfonos: móvil <a href="tel:+573052432281" aria-label="Llamar al número móvil +57 305 243 2281">+57 305 243 2281</a> y fijo <a href="tel:+576048236548" aria-label="Llamar al número fijo +57 604 823 6548">+57 604 823 6548</a></p>
+      <p class="mb-0">Agenda tu cita y recibe orientación para el cuidado de tu mascota.</p>
+    </div>
+  </footer>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
